@@ -10,4 +10,3 @@ defineProps({
 <template>
   <FinanceChart :entradas="entradas" :saidas="saidas" />
 </template>
-

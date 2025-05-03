@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
-        <router-link class="navbar-brand" to="/">Meu App</router-link>
+        <RouterLink class="navbar-brand" to="/">Meu App</RouterLink>
         <button
           class="navbar-toggler"
           type="button"
@@ -17,14 +17,15 @@
         <div class="collapse navbar-collapse" :class="{ show: isNavOpen }" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <router-link class="nav-link" active-class="active" to="/">Home</router-link>
+              <RouterLink class="nav-link" active-class="active" to="/">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" active-class="active" to="/about">Sobre</router-link>
+              <RouterLink class="nav-link" active-class="active" to="/about">Sobre</RouterLink>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" active-class="active" to="/grafico">Gráfico</router-link>
+              <RouterLink class="nav-link" active-class="active" to="/grafico">Gráfico</RouterLink>
             </li>
+            
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
@@ -62,7 +63,7 @@
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   }
   
-  .nav-link.router-link-exact-active {
+  .nav-link.RouterLink-exact-active {
     font-weight: bold;
   }
   </style>
