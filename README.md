@@ -1,6 +1,20 @@
-# gerenciamento de financas
+# Controle de Gastos 2.0
+Este projeto é uma aplicação web desenvolvida com Vue 3 e Vite, com o objetivo de ajudar os usuários a gerenciar suas finanças pessoais.
 
-This template should help get you started developing with Vue 3 in Vite.
+# Funcionalidades
+ - Cadastro de receitas e despesas
+ - Visualização de saldo atual
+ - Listagem de transações
+ - Organização por categorias
+# Tecnologias Utilizadas
+ - Vue 3
+ - Vite
+ - JavaScript
+# Como Executar o Projeto
+ 1 - Clone o repositório: git clone https://github.com/thiago0-08/controle-de-gastos-2.0.git
+2 - Instale as dependências: npm install
+ 3 -Inicie o servidor de desenvolvimento: npm run dev
+
 
 ## Recommended IDE Setup
 
