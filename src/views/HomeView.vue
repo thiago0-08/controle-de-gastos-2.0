@@ -6,6 +6,8 @@
     <TransactionForm @add-transaction="addTransaction" />
     <Summary :transactions="transactions" class="mb-4" />
     <TransactionList :transactions="transactions" @remove-transaction="removeTransaction" />
+
+    <FinanceChart :entradas="entradas" :saidas="saidas" />
     
   </div>
   <RouterView />
@@ -13,7 +15,7 @@
 
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-
+ import FinanceChart from '../components/FinanceChart.vue';
 import TransactionForm from '../components/TransactionForm.vue';
 import TransactionList from '../components/TransactionList.vue';
 import Summary from '../components/Summary.vue';
@@ -26,6 +28,7 @@ export default {
     TransactionForm,
     TransactionList,
     Summary,
+    FinanceChart
     
   },
   data() {
