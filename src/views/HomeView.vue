@@ -1,17 +1,44 @@
 <template>
-  
-
   <div class="container py-5">
-    <h1 class="text-center mb-4">Controle de Finanças</h1>
-    <TransactionForm @add-transaction="addTransaction" />
-    <Summary :transactions="transactions" class="mb-4" />
-    <TransactionList :transactions="transactions" @remove-transaction="removeTransaction" />
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold">💰 Controle de Finanças</h1>
+      <p class="text-muted">Gerencie suas entradas e saídas facilmente</p>
+    </div>
 
-    <FinanceChart :entradas="entradas" :saidas="saidas" />
-    
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title mb-3"><i class="bi bi-plus-circle me-2"></i>Nova Transação</h5>
+        <TransactionForm @add-transaction="addTransaction" />
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <Summary :transactions="transactions" />
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title"><i class="bi bi-list-ul me-2"></i>Lista de Transações</h5>
+        <TransactionList
+          :transactions="transactions"
+          @remove-transaction="removeTransaction"
+        />
+      </div>
+    </div>
+
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title"><i class="bi bi-bar-chart-line me-2"></i>Gráfico Financeiro</h5>
+        <FinanceChart :entradas="entradas" :saidas="saidas" />
+      </div>
+    </div>
+
+    <RouterView />
   </div>
-  <RouterView />
 </template>
+
 
 <script>
 import { RouterLink, RouterView } from 'vue-router'

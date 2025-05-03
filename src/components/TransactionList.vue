@@ -1,22 +1,44 @@
 <template>
-    <div class="card p-3">
-      <h3 class="mb-3">Transações</h3>
-      <ul class="list-group">
-        <li v-for="(transaction, index) in transactions" :key="index" class="list-group-item d-flex justify-content-between align-items-center">
-          <div>
-            <strong>{{ transaction.name }}</strong><br />
-            <small>{{ formatDate(transaction.date) }} - {{ transaction.type === 'entrada' ? 'Entrada' : 'Saída' }}</small>
-          </div>
-          <div class="d-flex align-items-center">
-            <span :class="transaction.amount > 0 ? 'text-success' : 'text-danger'">
-              {{ formatCurrency(transaction.amount) }}
-            </span>
-            <button @click="$emit('remove-transaction', index)" class="btn btn-sm btn-outline-danger ms-3">Remover</button>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </template>
+  <div class="card shadow-sm p-3 mb-4">
+    <h5 class="mb-3"><i class="bi bi-list-ul me-2"></i>Transações</h5>
+
+    <ul class="list-group list-group-flush">
+      <li
+        v-for="(transaction, index) in transactions"
+        :key="index"
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <strong>{{ transaction.name }}</strong><br />
+          <small class="text-muted">
+            <i
+              :class="transaction.type === 'entrada' ? 'bi bi-arrow-down-circle text-success' : 'bi bi-arrow-up-circle text-danger'"
+              class="me-1"
+            ></i>
+            {{ formatDate(transaction.date) }} – {{ transaction.type === 'entrada' ? 'Entrada' : 'Saída' }}
+          </small>
+        </div>
+
+        <div class="d-flex align-items-center">
+          <span
+            class="badge fs-6"
+            :class="transaction.amount > 0 ? 'bg-success' : 'bg-danger'"
+          >
+            {{ formatCurrency(transaction.amount) }}
+          </span>
+          <button
+            @click="$emit('remove-transaction', index)"
+            class="btn btn-sm btn-outline-danger ms-3"
+            title="Remover transação"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</template>
+
   
   
   

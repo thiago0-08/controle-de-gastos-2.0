@@ -1,32 +1,54 @@
 <template>
-    <form @submit.prevent="handleSubmit" class="card p-3 mb-4">
-      <div class="mb-3">
-        <label class="form-label">Nome</label>
-        <input v-model="transaction.name" type="text" class="form-control" placeholder="Nome" required />
+  <form @submit.prevent="handleSubmit" class="card p-4 shadow-sm mb-4">
+    <h5 class="mb-3"><i class="bi bi-pencil-square me-2"></i>Nova Transação</h5>
+
+    <!-- Nome -->
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Nome</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-tag"></i></span>
+        <input v-model="transaction.name" type="text" class="form-control" placeholder="Ex: Salário, Compra" required />
       </div>
-  
-      <div class="mb-3">
-        <label class="form-label">Valor</label>
-        <input v-model.number="transaction.amount" type="number" class="form-control" placeholder="Valor" required />
+    </div>
+
+    <!-- Valor -->
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Valor</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
+        <input v-model.number="transaction.amount" type="number" class="form-control" placeholder="0.00" required />
       </div>
-  
-      <div class="mb-3">
-        <label class="form-label">Data</label>
+    </div>
+
+    <!-- Data -->
+    <div class="mb-3">
+      <label class="form-label fw-semibold">Data</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
         <input v-model="transaction.date" type="date" class="form-control" required />
       </div>
-  
-      <div class="mb-3">
-        <label class="form-label">Tipo</label>
+    </div>
+
+    <!-- Tipo -->
+    <div class="mb-4">
+      <label class="form-label fw-semibold">Tipo</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-arrow-left-right"></i></span>
         <select v-model="transaction.type" class="form-select" required>
           <option value="">Selecione</option>
           <option value="entrada">Entrada</option>
           <option value="saida">Saída</option>
         </select>
       </div>
-  
-      <button type="submit" class="btn btn-primary w-100">Adicionar</button>
-    </form>
-  </template>
+    </div>
+
+    <!-- Botão -->
+    <button type="submit" class="btn btn-success w-100">
+      <i class="bi bi-plus-circle me-2"></i>Adicionar Transação
+    </button>
+  </form>
+</template>
+
   
   <script>
   export default {
