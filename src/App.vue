@@ -1,27 +1,32 @@
 <template>
   <NavBar />
+
   <div class="container py-5">
     <h1 class="text-center mb-4">Controle de Finanças</h1>
-
     <TransactionForm @add-transaction="addTransaction" />
     <Summary :transactions="transactions" class="mb-4" />
     <TransactionList :transactions="transactions" @remove-transaction="removeTransaction" />
+    
   </div>
   <RouterView />
 </template>
 
 <script>
 import { RouterLink, RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
+import NavBar from './components/NavBar.vue';
 import TransactionForm from './components/TransactionForm.vue';
 import TransactionList from './components/TransactionList.vue';
 import Summary from './components/Summary.vue';
 
+
 export default {
   components: {
+    NavBar,
+    RouterLink,
     TransactionForm,
     TransactionList,
-    Summary
+    Summary,
+    
   },
   data() {
     return {

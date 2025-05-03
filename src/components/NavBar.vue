@@ -22,22 +22,8 @@
             <li class="nav-item">
               <router-link class="nav-link" active-class="active" to="/about">Sobre</router-link>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><router-link class="dropdown-item" to="/item1">Item 1</router-link></li>
-                <li><router-link class="dropdown-item" to="/item2">Item 2</router-link></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li><router-link class="dropdown-item" to="/item3">Item 3</router-link></li>
-              </ul>
+            <li class="nav-item">
+              <router-link class="nav-link" active-class="active" to="/grafico">Gráfico</router-link>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -47,10 +33,12 @@
         </div>
       </div>
     </nav>
+    <RouterView />
   </template>
   
   <script>
   import { ref } from 'vue';
+  import { RouterLink, RouterView } from 'vue-router'
   
   export default {
     name: 'NavbarComponent',
@@ -71,7 +59,7 @@
   
   <style scoped>
   .navbar {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
   }
   
   .nav-link.router-link-exact-active {
