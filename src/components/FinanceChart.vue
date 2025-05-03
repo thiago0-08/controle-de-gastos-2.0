@@ -57,9 +57,9 @@
   </script>
   
 
-<style scoped>
+<!-- <style scoped>
   canvas {
     max-width: 800px;
     margin: auto;
   }
-</style>
+</style> -->

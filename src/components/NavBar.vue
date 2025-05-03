@@ -20,16 +20,13 @@
               <RouterLink class="nav-link" active-class="active" to="/">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" active-class="active" to="/about">Sobre</RouterLink>
+              <RouterLink class="nav-link" active-class="active" to="/sobre">Sobre</RouterLink>
             </li>
             <li class="nav-item">
               <RouterLink class="nav-link" active-class="active" to="/grafico">Gráfico</RouterLink>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
-            <button class="btn btn-outline-light" type="submit">Buscar</button>
-          </form>
+          
         </div>
       </div>
     </nav>
