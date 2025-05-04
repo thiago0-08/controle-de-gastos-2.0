@@ -1,3 +1,8 @@
+# Site para teste
+<img width="48" height="48" src="https://img.icons8.com/color/48/thick-arrow-pointing-down--v1.png" alt="thick-arrow-pointing-down--v1"/> 
+
+[Teste Agora ](https://financas20.netlify.app/)
+
 # Controle de Gastos 2.0
 Este projeto é uma aplicação web desenvolvida com Vue 3 e Vite, com o objetivo de ajudar os usuários a gerenciar suas finanças pessoais.
 
